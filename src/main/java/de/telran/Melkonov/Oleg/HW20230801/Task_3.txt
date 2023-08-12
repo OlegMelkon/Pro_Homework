@@ -1,0 +1,13 @@
+class Mother {
+
+}
+
+class Father extends Mother {
+
+}
+
+class Child extends Father {
+
+}
+
+
