@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CreditCard {
     private int cardNumber;
     private int cardPinCode;
-    double balance = 20000;
+    double balance = 0;
     double creditLimit;
     private double creditDebt = 0;
     private void deposit(int cardPinCode, double sumDeposit){
