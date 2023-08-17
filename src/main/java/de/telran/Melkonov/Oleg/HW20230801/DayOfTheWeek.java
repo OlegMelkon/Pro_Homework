@@ -1,6 +1,5 @@
 package de.telran.Melkonov.Oleg.HW20230801;
 
-import Classes.Lecture230803.Month;
 
 public enum DayOfTheWeek {
     MONDAY,
