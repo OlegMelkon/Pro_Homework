@@ -13,7 +13,7 @@ public class ZweiDimArray {
              int max = twoDimArr[0][twoDimArr.length-1];
         for (int i = 0; i < twoDimArr.length; i++){
             for (int j = 0; j < twoDimArr[i].length; j++){
-                if ((i  + j) <= twoDimArr.length-1){
+                if ((i  + j) == twoDimArr.length-1){
                     if (twoDimArr[i][j] > max) max = twoDimArr[i][j];
                 }
             }
