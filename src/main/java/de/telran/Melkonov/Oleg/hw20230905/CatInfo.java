@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CatInfo {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
 
         Cat cat1 = new Cat("Tom", 1, "black", true);
         Cat cat2 = new Cat("Tim", 2, "white", false);
@@ -56,14 +56,20 @@ public class CatInfo {
     }
 
     public static Map<String, Set<String>> task3(List<Cat> cats) {
-        Map<String, Set<String>> map = new HashMap<>();
-        HashSet<String> hashSet = new HashSet<>();
+        Map<String, Set<String>> map = new HashMap<String, Set<String>>();
 
         for (Cat c : cats) {
-            hashSet.add(c.getName());
-            map.put(c.getColor(), hashSet);
+            if(map.containsKey(c.getColor())) {
+                Set<String> names = map.get(c.getColor());
+                if (!names.contains(c.getName())) {
+                    names.add(c.getName());
+                }
+            } else{
+                Set<String> names = new HashSet<String>();
+                names.add(c.getName());
+                map.put(c.getColor(), names);
+            }
         }
-
         return map;
     }
 }
